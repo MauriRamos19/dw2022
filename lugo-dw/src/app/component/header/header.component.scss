@@ -1,0 +1,30 @@
+nav {
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    .titulo {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.pedidos {
+    background-color: gray;
+    border-radius: 40px;
+    cursor: pointer;
+
+    h1 {
+        padding: 10px 30px;
+    }
+}
+

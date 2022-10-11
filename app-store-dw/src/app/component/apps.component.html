@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <form>
+        <div class="mb-3">
+            <select class="form-control form-select form-select-lg mb-3" aria-label=".form-select-lg example" [(ngModel)]="categoriaSeleccionada" name="categoria">
+                <option selected>Categoria</option>
+                <option *ngFor="let categoria of categorias" [ngValue]="categoria" onclick="categoria">
+                    {{categoria.nombreCategoria}}</option>
+            </select>
+        </div>
+    </form>
+    <app-app-list
+        [apps]="categoriaSeleccionada.aplicaciones"
+    ></app-app-list>
+</div>
