@@ -1,13 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
+interface User {
+  id: string;
+  name: string;
+  orders: String[];
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
   title = 'lugo-dw';
   servicios:any[] = [];
+  @ViewChild('selectedUser') selectedUser: any;
+  users: User[] = [
+    {
+      id: '1',
+      name: 'Juan Perez',
+      orders: ['Medicamento 1', 'Medicamento 2', 'Medicamento 3']
+    },
+    {
+      id: '2',
+      name: 'Sofia Gomez',
+      orders: ['Medicamento 1', 'Medicamento 2', 'Medicamento 3']
+    },
+    {
+      id: '3',
+      name: 'Angelina Lopez',
+      orders: ['Medicamento 1', 'Medicamento 2', 'Medicamento 3']
+    }
+  ];
   serviciosTitulos: any[] = ['Farmacias', 'Regalos', 'Cafe', 'Salud','Regalos','Comida','Restaurantes'];
   showModal = false;
   servicioSeleccionado:any;

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { debugOutputAstAsTypeScript } from '@angular/compiler';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  @Input() users: any[] = [];
+  @Input() selectedUser: any;
   constructor() { }
 
   ngOnInit(): void {
